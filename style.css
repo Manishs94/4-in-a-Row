@@ -1,0 +1,55 @@
+#connect-4  { 
+    background-color: #1489ED;   
+    -webkit-user-select: none;    
+    -moz-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none;
+}
+#connect-4+.pedestal { background-color: #204E84; margin-right: -10px; margin-left: -10px;}
+#connect-4 .row { border-left: 3px solid #204E84; border-right: 3px solid #204E84; padding-top: 1.3%; padding-bottom: 1.3%;}
+.box {
+    background: white;
+    position: relative;
+    width: 10%;
+    display: table;
+    padding: 1.3% 0;
+    margin: 0 2.13%;
+    border-radius: 50%;
+    border: 1px solid #204E84;
+    -moz-box-shadow: inset 1px 1px 5px 0px #656565;
+    -webkit-box-shadow: inset 1px 1px 5px 0px #656565;
+    -o-box-shadow: inset 1px 1px 5px 0px #656565;
+    box-shadow: inset 1px 1px 5px 0px #656565;
+    filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=134, Strength=5);
+}
+.box.yellow { background: #FFFF3F; }
+.box.red { background: #EF2A1C; }
+  
+.box.red-through {animation: redPawn 0.9s ease-in;}
+.box.yellow-through {animation: yellowPawn 0.9s ease-in;}
+
+.empty { cursor: pointer;}
+
+@media screen and (min-width: 768px) {
+    .empty.yellow-player:hover { background: #FFFF3F; opacity:0.8; }
+    .empty.red-player:hover { background: #EF2A1C; opacity:0.8; }
+    .box { padding: 2.3% 0; }
+}
+
+@keyframes redPawn {
+    15%{
+      background: white;
+    }
+    0% {
+      background: #EF2A1C;
+    }
+  }
+  
+  @keyframes yellowPawn {
+    15%{
+      background: white;
+    }
+    0% {
+      background: #FFFF3F;
+    }
+  }
